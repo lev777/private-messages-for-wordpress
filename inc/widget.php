@@ -1,4 +1,11 @@
 <?php
+/**
+ * Adding widget
+ */
+function Pm4wp_load_widget() {
+    register_widget( 'Pm4wp_Widget' );
+}
+add_action( 'widgets_init', 'Pm4wp_load_widget' );
 
 /**
  * PM4WP Widget Class
@@ -119,11 +126,5 @@ class Pm4wp_Widget extends WP_Widget
 	}
 }
 
-/**
- * Adding widget
- */
-function Pm4wp_load_widget() {
-    register_widget( 'Pm4wp_Widget' );
-}
-add_action( 'widgets_init', 'Pm4wp_load_widget' );
+
 
