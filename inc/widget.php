@@ -2,7 +2,7 @@
 /**
  * Adding widget
  */
-add_action( 'widgets_init', create_function( '', 'return register_widget("Pm4wp_Widget");' ) );
+add_action( 'widgets_init', fn_array( '', 'return register_widget("Pm4wp_Widget");' ) );
 
 /**
  * PM4WP Widget Class
