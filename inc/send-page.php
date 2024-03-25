@@ -111,11 +111,6 @@ function rwpm_send()
 
 						$email_subject = strip_tags( $email_subject );
 
-						# if ( get_magic_quotes_gpc() )
-						{
-							$email_subject = stripslashes( $email_subject );
-							$email_body = stripslashes( $email_body );
-						}
 						$email_body = nl2br( $email_body );
 
 						$recipient_email = $wpdb->get_var( "SELECT user_email from $wpdb->users WHERE display_name = '$rec'" );
