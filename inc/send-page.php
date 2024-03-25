@@ -119,8 +119,8 @@ function rwpm_send()
 						
 						$email_body = nl2br( $email_body );
 
-						# $recipient_email = $wpdb->get_var( "SELECT user_email from $wpdb->users WHERE display_name = '$rec'" );
-						$recipient_email = $wpdb->get_var( $wpdb->prepare("SELECT user_email FROM $wpdb->users WHERE display_name = %s", $rec) );
+						$recipient_email = $wpdb->get_var( "SELECT user_email from $wpdb->users WHERE display_name = '$rec' LIMIT 1" );
+												
 						$mailtext = "<html><head><title>$email_subject</title></head><body>$email_body</body></html>";
 
 						// set headers to send html email
