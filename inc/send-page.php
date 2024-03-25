@@ -89,7 +89,9 @@ function rwpm_send()
 					unset( $_REQUEST['recipient'], $_REQUEST['subject'], $_REQUEST['content'] );
 
 					// send email to user
-					if ( $option['email_enable'] )
+					
+					#if ( $option['email_enable'] )
+					if (0=1)
 					{
 						$sender = $wpdb->get_var( "SELECT display_name FROM $wpdb->users WHERE user_login = '$sender' LIMIT 1" );
 
